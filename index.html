@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — NeonSort: Hex Color Puzzle — HexGrid Games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0A0A12;
+      --surface:   #0D1220;
+      --cyan:      #22DDFF;
+      --cyan-dark: #1599BB;
+      --text:      #E8F4FF;
+      --text-sec:  #9ABBE8;
+      --inactive:  #4A6080;
+      --divider:   #1E2A3A;
+      --card-bg:   #0D1220;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--divider);
+      padding: 28px 24px 24px;
+      text-align: center;
+    }
+
+    .app-name {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 2rem;
+      color: var(--text);
+      letter-spacing: 0.04em;
+    }
+
+    .app-name span { color: var(--cyan); }
+
+    header p {
+      font-size: 0.9rem;
+      color: var(--text-sec);
+      margin-top: 6px;
+      font-weight: 600;
+    }
+
+    /* ── Layout ── */
+    main {
+      max-width: 720px;
+      margin: 48px auto;
+      padding: 0 24px 80px;
+    }
+
+    /* ── Section card ── */
+    .card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 32px 36px;
+      margin-bottom: 20px;
+      border: 1px solid var(--divider);
+    }
+
+    h2 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 14px;
+    }
+
+    h3 {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text);
+      margin: 22px 0 8px;
+    }
+
+    h3:first-child { margin-top: 0; }
+
+    p { margin-bottom: 12px; color: var(--text); }
+    p:last-child { margin-bottom: 0; }
+
+    a {
+      color: var(--cyan);
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+    a:hover { border-color: var(--cyan); }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+    li { margin-bottom: 6px; }
+
+    /* ── Summary pill list ── */
+    .summary-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 4px;
+    }
+
+    @media (max-width: 480px) {
+      .summary-grid { grid-template-columns: 1fr; }
+    }
+
+    .pill {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background: #131B2A;
+      border-radius: 12px;
+      padding: 14px 16px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text);
+      border: 1px solid var(--divider);
+    }
+
+    .pill .icon {
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .pill.good .icon { color: #44FF88; }
+    .pill.neutral .icon { color: var(--cyan); }
+    .pill.note .icon { color: #FFAA22; }
+
+    /* ── Third party table ── */
+    .third-party {
+      border: 1px solid var(--divider);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+
+    .tp-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+    }
+
+    .tp-row.header {
+      background: #131B2A;
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-sec);
+    }
+
+    .tp-row + .tp-row { border-top: 1px solid var(--divider); }
+
+    .tp-cell {
+      padding: 12px 16px;
+      font-size: 0.88rem;
+    }
+
+    .tp-cell + .tp-cell { border-left: 1px solid var(--divider); }
+
+    @media (max-width: 520px) {
+      .tp-row { grid-template-columns: 1fr; }
+      .tp-cell + .tp-cell { border-left: none; border-top: 1px solid var(--divider); }
+      .tp-row.header .tp-cell:not(:first-child) { display: none; }
+    }
+
+    /* ── Contact box ── */
+    .contact-box {
+      background: #0D2030;
+      border: 1px solid var(--cyan-dark);
+      border-radius: 14px;
+      padding: 24px 28px;
+      color: var(--text);
+      margin-top: 24px;
+    }
+
+    .contact-box h3 { color: var(--cyan); margin-top: 0; }
+    .contact-box p  { color: var(--text-sec); }
+    .contact-box a  { color: var(--cyan); }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--inactive);
+      padding: 0 24px 40px;
+    }
+
+    /* ── Effective date badge ── */
+    .date-badge {
+      display: inline-block;
+      background: var(--card-bg);
+      border: 1px solid var(--divider);
+      border-radius: 20px;
+      padding: 5px 16px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-sec);
+      margin-bottom: 32px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="app-name"><span>Neon</span>Sort</div>
+    <p>Privacy Policy &nbsp;·&nbsp; Hex Color Puzzle Game for Android</p>
+  </header>
+
+  <main>
+
+    <div style="text-align:center;">
+      <span class="date-badge">Effective date: April 4, 2026</span>
+    </div>
+
+    <!-- TL;DR summary -->
+    <div class="card">
+      <h2>At a glance</h2>
+      <p style="color:var(--text-sec); font-size:0.92rem; margin-bottom:18px;">
+        NeonSort is a simple, offline color sorting puzzle game. Here's the short version:
+      </p>
+      <div class="summary-grid">
+        <div class="pill good"><span class="icon">✓</span>No account or sign-in required</div>
+        <div class="pill good"><span class="icon">✓</span>No personal data you enter is collected</div>
+        <div class="pill good"><span class="icon">✓</span>Game progress saved locally on your device only</div>
+        <div class="pill neutral"><span class="icon">i</span>Ads are shown — ad networks may collect data</div>
+        <div class="pill note"><span class="icon">!</span>You can opt out of personalised ads in device settings</div>
+      </div>
+    </div>
+
+    <!-- Who we are -->
+    <div class="card">
+      <h2>Who we are</h2>
+      <p>
+        NeonSort: Hex Color Puzzle ("the app", "we", "us") is an indie mobile game developed
+        by <strong>HexGrid Games</strong>. If you have any questions about this
+        policy, see the contact section at the bottom.
+      </p>
+    </div>
+
+    <!-- What we collect -->
+    <div class="card">
+      <h2>Information we collect</h2>
+
+      <h3>Information you provide</h3>
+      <p>
+        NeonSort does not ask you to create an account, enter your name, email address,
+        or any other personal information. We do not collect anything you type or enter.
+      </p>
+
+      <h3>Game progress data</h3>
+      <p>
+        Your current level, highest level reached, current board state, and settings preferences
+        (music, sound, vibration) are saved in a local JSON file on your device using
+        <code>Application.persistentDataPath</code>. This data never leaves your device
+        and is not transmitted to us or any third party.
+      </p>
+
+      <h3>Data collected automatically via third-party SDKs</h3>
+      <p>
+        The app includes a third-party SDK for advertising. This SDK may automatically
+        collect certain device and usage information as described below. We do not directly
+        receive or store this data ourselves — it is governed by the provider's own privacy policy.
+      </p>
+    </div>
+
+    <!-- Third parties -->
+    <div class="card">
+      <h2>Third-party SDKs</h2>
+
+      <div class="third-party">
+        <div class="tp-row header">
+          <div class="tp-cell">Service</div>
+          <div class="tp-cell">Purpose</div>
+          <div class="tp-cell">Privacy Policy</div>
+        </div>
+        <div class="tp-row">
+          <div class="tp-cell"><strong>Unity LevelPlay<br/>(Ads Mediation)</strong></div>
+          <div class="tp-cell">Serves banner and interstitial ads. May collect advertising ID, device info, IP address, and ad interaction data.</div>
+          <div class="tp-cell"><a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">unity.com/legal/privacy-policy</a></div>
+        </div>
+        <div class="tp-row">
+          <div class="tp-cell"><strong>Google Play Services</strong></div>
+          <div class="tp-cell">Required by the Android platform for app delivery and updates.</div>
+          <div class="tp-cell"><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></div>
+        </div>
+      </div>
+
+      <p style="margin-top:16px; font-size:0.88rem; color:var(--text-sec);">
+        Unity's ad mediation platform (LevelPlay) may include additional downstream ad network
+        partners. You can review Unity's list of ad network partners in their privacy documentation.
+      </p>
+    </div>
+
+    <!-- Advertising ID -->
+    <div class="card">
+      <h2>Advertising ID &amp; personalised ads</h2>
+      <p>
+        The app uses your device's Android Advertising ID (AAID) to serve ads. By default,
+        ads may be personalised based on your interests. You can opt out of personalised
+        advertising at any time through your device settings:
+      </p>
+      <ul>
+        <li>Open <strong>Settings</strong> on your Android device</li>
+        <li>Go to <strong>Privacy → Ads</strong> (or <strong>Google → Ads</strong> on some devices)</li>
+        <li>Tap <strong>"Opt out of Ads Personalisation"</strong> or <strong>"Delete advertising ID"</strong></li>
+      </ul>
+      <p>
+        Opting out means you will still see ads, but they will not be tailored to your interests.
+        It does not affect your ability to play the game.
+      </p>
+    </div>
+
+    <!-- Children -->
+    <div class="card">
+      <h2>Children's privacy</h2>
+      <p>
+        NeonSort is a general-audience app and is not directed at children under the age of 13.
+        We do not knowingly collect personal information from children. The app includes
+        interest-based advertising, which means it is not intended for use by children under 13
+        without parental supervision.
+      </p>
+      <p>
+        If you believe your child has been exposed to advertising that is inappropriate,
+        please contact us using the details below and we will address it promptly.
+      </p>
+    </div>
+
+    <!-- Data retention -->
+    <div class="card">
+      <h2>Data retention &amp; deletion</h2>
+      <p>
+        The only data stored by the app itself is your local game save file (level progress
+        and settings). You can delete this at any time by uninstalling the app, which removes
+        all locally stored data from your device.
+      </p>
+      <p>
+        For data collected by the Unity LevelPlay SDK, please refer to Unity's privacy policy
+        for information on their retention practices and how to submit a data deletion request.
+      </p>
+    </div>
+
+    <!-- Your rights -->
+    <div class="card">
+      <h2>Your rights</h2>
+      <p>
+        Depending on where you live, you may have rights under applicable privacy law,
+        including the right to access, correct, or delete personal data held about you.
+        Because we do not directly collect or store your personal data, most requests
+        should be directed to the relevant third-party provider (Unity).
+      </p>
+      <p>
+        If you are a resident of the European Economic Area (EEA) or California (CCPA),
+        you may have additional rights. Please contact us if you have questions about
+        exercising these rights.
+      </p>
+    </div>
+
+    <!-- Changes -->
+    <div class="card">
+      <h2>Changes to this policy</h2>
+      <p>
+        We may update this privacy policy from time to time — for example, if we add new
+        features or third-party integrations. When we do, we will update the effective date
+        at the top of this page. We encourage you to review this page periodically.
+        Continued use of the app after changes are posted constitutes acceptance of the
+        updated policy.
+      </p>
+    </div>
+
+    <!-- Contact -->
+    <div class="card">
+      <h2>Contact us</h2>
+      <div class="contact-box">
+        <h3>Questions about this policy?</h3>
+        <p>
+          If you have any questions, concerns, or requests regarding this privacy policy
+          or the data practices described here, please reach out:
+        </p>
+        <p style="margin-top:12px;">
+          <strong>HexGrid Games</strong><br/>
+          Email: <a href="mailto:hexgrid.games@gmail.com">hexgrid.games@gmail.com</a>
+        </p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>NeonSort: Hex Color Puzzle &nbsp;·&nbsp; HexGrid Games &nbsp;·&nbsp; Last updated April 4, 2026</p>
+    <p style="margin-top:6px;">This policy applies to the Android version of the app.</p>
+  </footer>
+
+</body>
+</html>
